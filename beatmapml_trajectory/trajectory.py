@@ -146,7 +146,7 @@ def make_inputs(beatmap: Beatmap, capture_rate: int=60) -> np.ndarray:
         S: Whether the frame represents a tick in a slider
 
     Raises:
-        NotImplemented('Cannot make trajectory for 2B-style map'):
+        NotImplementedError('Cannot make trajectory for 2B-style map'):
             If the beatmap is 2B style
     """
     hit_objecsts = sorted(beatmap.hit_objects_no_spinners,
@@ -158,7 +158,7 @@ def make_inputs(beatmap: Beatmap, capture_rate: int=60) -> np.ndarray:
 
     # The trajectory is not defined for 2B style map
     if check_2b(hit_objecsts):
-        raise NotImplemented('Cannot make trajectory for 2B-style map')
+        raise NotImplementedError('Cannot make trajectory for 2B-style map')
 
     # Calculate beatmap length and frames required
     total_length = (hit_objecsts[-1].end_time_s if isinstance(
