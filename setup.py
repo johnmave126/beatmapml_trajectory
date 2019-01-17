@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='beatmapml_trajectory',
-    version='0.2.4',
+    version='0.1.0',
     description='Generate Auto Mod trajectory for machine learning',
     author='Youmu Chan',
     author_email='johnmave126@gmail.com',
